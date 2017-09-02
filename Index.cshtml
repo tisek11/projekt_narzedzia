@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div>
+
+   <center><h1>System zarządzania kryzysowego</h1> </center>
+
+
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Znajdz Nas </h2>
+        <p>
+          Jeżeli chcesz więcej dowiedzieć się o nas. Kliknij przycisk który przekierowuje na oficjalną strone Facebook
+        </p>
+        <p><a class="btn btn-default" href="https://www.facebook.com/groups/637417923121706/">Dowiedz się o nas &raquo;</a></p>
+    </div>
+</div>
+<div>
+    @{
+
+        foreach (var kontakt in ViewBag.Kontakty)
+        {
+            <p>
+
+                <h4>Autor</h4>
+                @kontakt.Imie @kontakt.Nazwisko @kontakt.Miejscowosc @kontakt.Ulica
+
+
+            </p>
+
+
+        }
+
+    }
+
+
+</div>
